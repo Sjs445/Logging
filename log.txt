@@ -1,0 +1,1 @@
+Line Number: 25 | Function: logWrite | Type Placeholder | Some Description | Date: Fri Sep 06 11:28:39 2019

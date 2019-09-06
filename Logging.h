@@ -5,26 +5,18 @@
 
 using namespace std;
 
-class Log{
+class Log
+{
+private:
+  int lineNo;
+  int type;
+  string description;
+  string function;
+  string dateTime;
 public:
   void logOpen(fstream & fs, string);
   void logClose(fstream & fs);
-  void logRead();
-  void logWrite();
+  void logRead(fstream & fs);
+  void logWrite(fstream & fs);
   void logFlush();
 };
-
-void Log::logOpen(fstream & fs, string fileName)
-{
-  fs.open(fileName, fstream::in | fstream::out | fstream::app);
-}
-
-void Log::logClose(fstream & fs)
-{
-  fs.close();
-}
-
-void Log::logRead()
-{
-  
-}
