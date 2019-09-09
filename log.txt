@@ -1,1 +1,10 @@
-Line Number: 25 | Function: logWrite | Type Placeholder | Some Description | Date: Fri Sep 06 11:28:39 2019
+Line Number: 39 | Function: logWrite | Type: Warning | Description: A log | Date: Mon Sep  9 10:47:04 2019
+Line Number: 39 | Function: logWrite | Type: Error | Description: A log | Date: Mon Sep  9 10:47:04 2019
+Line Number: 39 | Function: logWrite | Type: Fatal | Description: A log | Date: Mon Sep  9 10:47:04 2019
+Line Number: 39 | Function: logWrite | Type: Warning | Description: A log | Other: Something Else | Date: Mon Sep  9 10:48:25 2019
+Line Number: 39 | Function: logWrite | Type: Error | Description: A log | Other: Something Else | Date: Mon Sep  9 10:48:25 2019
+Line Number: 39 | Function: logWrite | Type: Fatal | Description: A log | Other: Something Else | Date: Mon Sep  9 10:48:25 2019
+Line Number: 43 | Function: logWrite | Type: Warning | Description: A log | Other: Something Else | Date: Mon Sep  9 10:50:20 2019
+Line Number: 43 | Function: logWrite | Type: Error | Description: A log | Other: Something Else | Date: Mon Sep  9 10:50:20 2019
+Line Number: 43 | Function: logWrite | Type: Fatal | Description: A log | Other: Something Else | Date: Mon Sep  9 10:50:20 2019
+Line Number: 43 | Function: logWrite | Type: Success | Description: A log | Other: Something Else | Date: Mon Sep  9 10:50:20 2019

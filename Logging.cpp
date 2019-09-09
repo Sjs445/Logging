@@ -16,11 +16,29 @@ void Log::logRead(fstream & fs)
 
 }
 
-void Log::logWrite(fstream & fs)
+void Log::logWrite(fstream & fs, string description, int type, string other)
 {
   //Line Number | Function Name | Type | Description | Date/Time
   time_t now = time(0);
   char * date_time = ctime(&now);
+  string typeSet;
 
-  fs<<"Line Number: "<<__LINE__<<" | Function: "<<__FUNCTION__<<" | Type Placeholder "<<"| Some Description "<<"| Date: "<<date_time;
+  if(type == 1)
+  {
+    typeSet = "Warning";
+  }
+  else if(type == 2)
+  {
+    typeSet = "Error";
+  }
+  else if(type == 3)
+  {
+    typeSet = "Fatal";
+  }
+  else
+  {
+    typeSet = "Success";
+  }
+
+  fs<<"Line Number: "<<__LINE__<<" | Function: "<<__FUNCTION__<<" | Type: "<<typeSet<<" | Description: "<<description<<" | Other: "<<other<<" | Date: "<<date_time;
 }
