@@ -9,12 +9,15 @@ int main()
 
   for(int i=1; i<=4; i++)
   {
-    l.logWrite(fileStream, "A log", i, "Logging everything normally");
+    l.logWrite(fileStream, "A log", i, "Logging normally");
   }
 
   l.logFlush(fileStream);
   l.logWrite(fileStream, "A log", 5, "Flushed");
   l.logFlush(fileStream);
+  l.logClose(fileStream);
+
+  l.logOpen(fileStream, "log.txt"); //Reopen for Reading
   l.logRead(fileStream);
   l.logFlush(fileStream);
   l.logClose(fileStream);

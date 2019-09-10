@@ -4,6 +4,10 @@ void Log::logOpen(fstream & fs, string fileName)
 {
   fs.open(fileName, fstream::in | fstream::out | fstream::app);
   //Open the file for input, output, and appending to the file.
+  if(!fs.is_open())
+  {
+    cout<<"File could not be opened!\n";
+  }
 }
 
 void Log::logClose(fstream & fs)
@@ -13,7 +17,10 @@ void Log::logClose(fstream & fs)
 
 void Log::logRead(fstream & fs)
 {
-
+  while(getline(fs, description, '|'))
+  {
+    cout<<description;
+  }
 }
 
 void Log::logWrite(fstream & fs, string description, int type, string other)
