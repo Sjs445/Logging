@@ -1,5 +1,6 @@
 #include "Logging.cpp"
 
+
 int main()
 {
   fstream fileStream;
@@ -8,9 +9,14 @@ int main()
 
   for(int i=1; i<=4; i++)
   {
-    l.logWrite(fileStream, "A log", i, "Something Else");
+    l.logWrite(fileStream, "A log", i, "Logging everything normally");
   }
 
+  l.logFlush(fileStream);
+  l.logWrite(fileStream, "A log", 5, "Flushed");
+  l.logFlush(fileStream);
+  l.logRead(fileStream);
+  l.logFlush(fileStream);
   l.logClose(fileStream);
 
   return 0;

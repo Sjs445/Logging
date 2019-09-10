@@ -13,7 +13,7 @@ void Log::logClose(fstream & fs)
 
 void Log::logRead(fstream & fs)
 {
-
+  
 }
 
 void Log::logWrite(fstream & fs, string description, int type, string other)
@@ -21,6 +21,7 @@ void Log::logWrite(fstream & fs, string description, int type, string other)
   //Line Number | Function Name | Type | Description | Date/Time
   time_t now = time(0);
   char * date_time = ctime(&now);
+
   string typeSet;
 
   if(type == 1)
@@ -41,4 +42,9 @@ void Log::logWrite(fstream & fs, string description, int type, string other)
   }
 
   fs<<"Line Number: "<<__LINE__<<" | Function: "<<__FUNCTION__<<" | Type: "<<typeSet<<" | Description: "<<description<<" | Other: "<<other<<" | Date: "<<date_time;
+}
+
+void Log::logFlush(fstream & fs)
+{
+  fs.flush();
 }
