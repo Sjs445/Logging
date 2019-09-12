@@ -15,9 +15,8 @@ int main()
   l.logFlush(fileStream);
   l.logWrite(fileStream, "A log", 5, "Flushed");
   l.logFlush(fileStream);
-  l.logClose(fileStream);
 
-  l.logOpen(fileStream, "log.txt"); //Reopen for Reading
+  fileStream.seekg(0);
   l.logRead(fileStream);
   l.logFlush(fileStream);
   l.logClose(fileStream);
