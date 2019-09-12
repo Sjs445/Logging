@@ -1,6 +1,5 @@
 #include "Logging.cpp"
 
-
 int main()
 {
   fstream fileStream;
